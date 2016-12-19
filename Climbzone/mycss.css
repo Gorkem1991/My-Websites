@@ -1,0 +1,413 @@
+.logo{
+  margin: 3px;
+}
+
+body
+{
+	font-family: verdana;
+}
+/*dark brown background for header*/
+.background1{
+border-style: solid;
+border-color: black;
+border-width: 3px;
+  background-image:url(Images/deneme2.jpg);
+  border-radius:15px;
+  width:1003px;
+  height:68px;
+  margin-left:178px;
+  margin-top:25px;
+  box-shadow: 4px 4px 4px #75602d;
+ 
+  
+}
+
+/*dark brown background for links*/
+.background2{
+border: 3px solid black;
+  background-image:url(Images/deneme2.jpg);
+    width:280px;
+	height:641px;
+	margin-left:180px;
+	margin-top:10px;
+	border-radius:15px;
+	box-shadow: 4px 4px 4px #75602d;
+}
+
+/*dark brown background for content*/
+.background3{
+border-style: solid;
+border-color: black;
+border-width: 3px;
+	background-image:url(Images/deneme2.jpg);
+	width:705px;
+	height:641px;
+	margin-left:475px;
+	margin-top:-646px;
+	border-radius:15px;
+	box-shadow: 4px 4px 4px #75602d;
+}
+
+/*dark brown background for copyright*/
+.background4{
+border: 3px solid black;
+ background-image:url(Images/deneme2.jpg);
+  border-radius:15px;
+  width:1003px;
+  height:68px;
+  margin-left:178px;
+  margin-top:10px;
+ box-shadow: 4px 4px 4px #75602d;
+ 	
+}
+
+/*light brown background for header*/
+.inner1 {	
+width: 985px;
+	height: 50px;
+	background-color: #FFFACD;
+	border: 5px solid #000000;
+	margin-top:4px;
+	margin-left:4px;
+	border-radius:15px;
+	
+}
+
+/*light brown background for links*/
+.inner2 {	
+width: 256px;
+	height: 617px;
+	background-color: #FFFACD;
+	border: 5px solid #000000;
+	padding: 2px;
+	margin: 5px;
+	border-radius:15px;
+}
+
+/*light brown background for content*/
+.inner3{
+	width: 680px;
+	height: 617px;
+	background-color: #FFFACD;
+	border: 5px solid #000000;
+	padding: 2px;
+	margin: 5px;
+	border-radius:15px;
+	overflow: auto;
+ 
+}
+
+/*light brown background for copyright*/
+.inner4 {	
+width: 985px;
+	height: 50px;
+	background-color: #FFFACD;
+	border: 5px solid #000000;
+	margin-top:4px;
+	margin-left:4px;
+	border-radius:15px;
+}
+
+
+/*size and position of header*/
+.headerh1{
+ font-size:250%;
+margin-left:55px;
+margin-top:-55px;
+
+}
+
+/*size, position, border-width, colour etc. for links*/
+.Home, .BirthdayClimbingParties, .HenStagClimbingParties, .ProfessionalClimbingCoaching, .ClimbingProducts, .Cafe, .OpeningHours, .ContactUs{
+text-decoration: none;
+color:black;
+font-size:22.4px;
+background-color:#fae4c5;
+margin:5px;
+margin-top:5px;
+margin-left:8px;
+display:inline-block;
+padding:5px;
+border-style: solid;
+border-color: black;
+border-width: 2px;
+border-top-left-radius:10px;
+border-bottom-right-radius:10px;
+box-shadow: 2px 2px 2px #75602d;
+
+}
+
+/*background colour changing when the mouse is on the links*/
+.Home:hover, .BirthdayClimbingParties:hover, .HenStagClimbingParties:hover, .ProfessionalClimbingCoaching:hover, .ClimbingProducts:hover, .Cafe:hover , .OpeningHours:hover, .ContactUs:hover{
+    background-color: #dca53b;
+	color: black;
+
+} 
+
+/*positioning of header in the content in all pages except menu page*/
+.Openingh, .climb, .ProfessionalCC,.HSClimbing, .BClimbing, .home{
+text-align:center;
+}
+
+/*positioning of product helmet picture in products page*/
+.helmet{
+float: left;
+margin-right: 10px;
+margin-left: 10px;
+border: 1px solid #000000;
+  
+}
+
+/*positioning of product shoes picture in products page*/
+.shoes{
+float: left;
+margin-right: 10px;
+margin-left: 10px;
+margin-top: 40px;
+border: 1px solid #000000;
+ 
+}
+
+/*positioning of product quickdraw picture in products page*/
+.quickdraw{
+float: left;
+margin-right: 10px;
+margin-left: 10px;
+margin-top: 35px;
+border: 1px solid #000000;
+  
+}
+
+/*positioning of product rope picture in products page*/
+.Rope{
+float: left;
+margin-right: 10px;
+margin-left: 10px;
+margin-top: 35px;
+border: 1px solid #000000;
+  
+}
+
+/*positioning of product bag picture in products page*/
+.bag{
+float: left;
+margin-right: 10px;
+margin-left: 10px;
+margin-top: 35px;
+border: 1px solid #000000;
+}
+
+/*positioning of text for every pages*/
+p{
+margin-right:10px;
+text-align: justify;
+    text-justify: inter-word;
+}
+
+/*positioning of header and h2 in the content in menu page*/
+.menu,h2{
+ margin-left:25px;
+}
+
+/*font size and position of ordered list for cafe page*/
+ol{
+margin-left:20px;
+font-size:25px;
+}
+
+/*size, background colour, border size of table for opening hours page*/
+table, th, td , tr {
+font-size:120%;
+margin:0 auto;
+background-color:white;
+text-align:center;
+border:2px solid black;
+
+}
+
+
+
+
+/*adjustment and font size of personal details in contact us page*/
+fieldset{
+margin:10px;
+font-size:22px;
+}
+
+/*adjustment of name label in contact us page*/
+.fname1{
+margin-left:35px;
+}
+
+/*adjustment of surname label in contact us page*/
+.sname1{
+margin-left:18px;
+}
+
+/*adjustment of email label in contact us page*/
+.email1{
+margin-left:35px;
+}
+
+/*adjustment and size of message box in contact us page*/
+.sizeofmessagebox{		
+	height: 40px;
+	width: 150px;
+    text-align:center;
+font-size:120%;
+ 
+}
+
+/*font size of name, surname, email and message box labels in contact us page*/
+.fname1, .sname1, .email1, .message1{
+width:150px;
+height:30px;
+font-size:22px;
+}
+
+/*size of name, surname and email textboxes in contact us page*/
+#fname, #sname, #email{
+width:150px;
+height:30px;
+font-size:120%;
+}
+
+/*size of the radiobuttons in birthday climbing parties page*/
+.radiobutton1, .radiobutton2, .radiobutton3{
+  width:17px;
+height:17px;
+
+}
+
+/* price table in birthday climbing parties*/
+.pricetable th, table.pricetable{
+margin-top:40px;
+border: 3px solid black;
+border-collapse:collapse;
+
+}
+
+/*book button in birthday climbing parties page*/
+.book{
+margin-top:20px;
+width:150px;
+height:40px;
+font-size:190%;
+}
+
+/* size of message textbox in contact us page*/
+textarea{
+  width:400px;
+  height:200px;
+vertical-align:text-top;
+font-size:120%;
+}
+
+
+/*copyright size, place etc in all pages*/
+.copy{
+padding-top:15px;
+padding-left:10px;
+display:inline-block;
+font-size:120%;
+}
+
+/*text adjustment in birthday climbing parties page*/
+.birthdaytext{
+margin-right:10px;
+margin-left:10px;
+text-align: justify;
+    text-justify: inter-word;
+}
+
+/*text adjustment in birthday climbing parties page*/
+.birthdaytext2{
+margin-right:10px;
+margin-left:10px;
+text-align: justify;
+    text-justify: inter-word;
+}
+
+/*text adjustment in Hen stag climbing parties page*/
+.HSclimbingText{
+margin-right:10px;
+margin-left:10px;
+text-align: justify;
+    text-justify: inter-word;
+}
+
+/*happy birthday picture adjustment in birthday climbing parties page*/
+.birthday{
+float: right;
+margin-right: 10px;
+margin-left: 10px;
+margin-top: 5px;
+border: 1px solid #000000;
+  
+}
+
+/*text adjustment in home page*/
+.hometext{
+margin-right:10px;
+Text-indent: 20px;
+margin-left:10px;
+text-align: justify;
+    text-justify: inter-word;
+}
+
+/*text adjustment in professional climbing coaching page*/
+.professionalCCtext{
+margin-right:10px;
+Text-indent: 20px;
+margin-left:10px;
+text-align: justify;
+    text-justify: inter-word;
+}
+
+/*picture adjustment in professional climbing coaching page*/
+.coach{
+float: right;
+margin-right: 10px;
+margin-left: 10px;
+border: 1px solid #000000;
+}
+
+/* price table in professional coaching page */
+.table2 th, table.table2, .table2 tr, .table2 td{
+background-color:white;
+border: 3px solid black;
+border-collapse:collapse;
+}
+
+/*product details in product page*/
+.productul li{
+    margin-left:180px;
+}
+
+/*adjustment of h3 header in hen stag climbing parties page*/
+h3{
+margin-left:10px;
+}
+
+/*adjustment of picture in hen stag climbing parties*/
+.hs{
+float: right;
+margin-right: 10px;
+margin-left: 10px;
+border: 1px solid #000000;
+}
+
+/*adjustment of picture in hen stag climbing parties*/
+.hs2{
+margin-left: 20px;
+border: 1px solid #000000;
+}
+
+video
+{
+	margin-left: 5px;
+}
+.products
+{
+	margin-left: 200px;
+}
