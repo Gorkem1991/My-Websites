@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Flag Quiz</title>
+
+ 		<link rel="shortcut icon"  href="flags2.ico">
+ 		<link rel="stylesheet" type="text/css" href="quizcss.css">
+
+		<script>
+			var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, chD, correct =0;
+			var questions = [
+			    [ "brazil.png", "Brazil", "Colombia", "Malta", "Egypt", "A" ],
+				[ "cy.png", "Honduras", "Jordan", "Cyprus", "Kuwait", "C" ],
+				[ "burkina.png", "Morocco", "Madagascar", "Burkina Faso", "Mauritius", "C" ],
+				[ "thailand.png", "Thailand", "Malawi", "Maldives", "Nepal", "A" ],
+				[ "nauru.png", "Djibouti", "Fiji", "Gibraltar", "Nauru", "D" ],
+				[ "barbados.png", "Jamaica", "Cape Verde", "Barbados", "Benin", "C" ],
+				[ "poland.png", "Indonesia", "Poland", "Malta", "Monaco", "B" ],
+				[ "egypt.png", "Egypt", "Oman", "Portugal", "San Marino", "A" ],
+				[ "gana.png", "Uganda", "Zambia", "Greenland", "Gana", "D" ],
+				[ "hungary.png", "Gabon", "Hungary", "El Salvador", "Dominica", "B" ]
+			];
+			function _(x)
+			{
+				return document.getElementById(x);
+			}
+
+			function renderQuestion()
+			{
+				test1.innerHTML ="";
+				test = _("test");
+				if(correct>=5)
+				{
+					test.innerHTML = "<img src='well.jpg' height='300' width='400'>";
+				}
+				else
+				{
+					test.innerHTML = "<img src='failed.jpg' height='300' width='400'>";
+				}
+				if(pos >= questions.length)
+				{
+					test1.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+					_("test_status").innerHTML = "Test Completed";
+					pos = 0;
+					correct = 0;
+					test.innerHTML += "<div class='btna'><button onclick='renderQuestion(pos=0)'>Restart !</button>";
+					return false;
+				}
+				_("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+				question = questions[pos][0];
+				chA = questions[pos][1];
+				chB = questions[pos][2];
+				chC = questions[pos][3];
+				chD = questions[pos][4];
+				test.innerHTML = "<img src=' "+ question + "' height='300' width='400'>";
+				
+				test.innerHTML += " <div class='radiobtn'><label for='btn1'> <input id='btn1' type='radio' name='choices' value='A'> "+chA+" </label></div>";
+				test.innerHTML += "<div class='radiobtn'><label for='btn2'><input id='btn2'type='radio' name='choices' value='B'> "+chB+" </label></div>";
+				test.innerHTML += "<div class='radiobtn'><label for='btn3'> <input id='btn3' type='radio' name='choices' value='C'> "+chC+"</label></div>";
+				test.innerHTML += "<div class='radiobtn'><label for='btn4'> <input id='btn4' type='radio' name='choices' value='D'> "+chD+"</label></div>";
+				test.innerHTML += "<div class='btna'><button onclick='checkAnswer()'>Submit Answer</button>";
+			}
+
+			function checkAnswer()
+			{
+				choices = document.getElementsByName("choices");
+				var radios = document.getElementsByTagName('input');
+
+				for (var i = 0; i < radios.length; i++) 
+				{
+				    if (radios[i].type === 'radio' && radios[i].checked) 
+				    {
+				        for(var i=0; i<choices.length; i++)
+				        {
+							if(choices[i].checked)
+							{
+								choice = choices[i].value;
+							}
+						}
+					if(choice == questions[pos][5])
+					{
+						correct++;
+					}
+					pos++;
+					renderQuestion();  
+				    }
+				}
+			}
+			window.addEventListener("load", renderQuestion, false);
+		</script>
+	</head>
+	<body>
+		<h3 id="test_status"></h3>
+		<div class="area">
+			<div class="flags"><br>
+				<div id="myflag"></div>
+				<div id="test1"></div>
+				<div id="test"></div>
+			</div>
+		</div>	 
+	</body>
+</html>
