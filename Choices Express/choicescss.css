@@ -1,0 +1,86 @@
+
+/*Navigation bar, links, logo*/
+
+.nav li a{line-height: 78px !important;font-size: 22px;}
+.dropdown-menu li a {line-height: 58px !important;}
+.dropdown-menu > li > a:hover {background-color: #222222;}
+ul.nav a { color: white !important; }
+ul.nav a:hover { color: yellow !important; }
+ul{text-align:center;}
+.navbaritems{display: inline-block; margin-left: 100px;}
+.dropdown-menu{background-color: #222222;}
+.ordernow{font-size: 22px; color:yellow;margin-left: 220px;cursor:default;}
+
+
+
+
+/*Home and Contact us Pages background and text size*/
+#section1 {padding-top:50px;padding-bottom:50px; color: #fff; background-color:#f2f2f2; }
+#section1 p{font-size: 18px;color:black;}
+
+/*Menu and deals pages settings*/
+#section2 {padding-top:50px;padding-bottom:50px; color: #fff; background-color:#f2f2f2; }
+.info > p{color:red;margin-left: 111px;}
+h4{margin-left:8%;color:red;}
+h1{margin-left:8%;background-color: #222222;margin-right:8%;border-radius: 5px;padding-left: 15px;}
+#foodname {display:inline-block;} 
+#foodprice {display:inline-block; float:right; margin-right:100px;} 
+.position{word-spacing: 40px;margin-right: 25px;}
+.position2{word-spacing: 55px;margin-right: 25px;}
+.position3{word-spacing: 65px;margin-right: 65px;}
+.ingredients{color:red;margin-left: 100px;}
+.mobileposition{margin-right:60px;}
+h3{margin-left: 100px;color:black;}
+span{word-spacing: 30px;}
+
+
+/*Deals and contact us pages settings*/
+.deals{margin-bottom: 50px;}
+#map{width:75%;height:380px;}
+
+
+
+@media only screen and (max-width: 1299px) {
+  .ordernow{font-size: 22px; color:yellow;margin-left: 95px;}
+
+ 
+}
+
+@media only screen and (max-width: 1200px) {
+  .ordernow{font-size: 22px; color:yellow;margin-left: 0px;}
+  .choicelogo{margin-left:80px;}
+  #section1 p{margin-left: 0px;}
+    #map{margin:auto;width:85%}
+    .address{text-align:center;}
+ 
+}
+@media only screen and (max-width: 1070px) {
+  .ordernow{font-size: 22px; color:yellow;margin-left: 0px;}
+
+.backgroundpics{display:none;}
+}
+@media only screen and (max-width:1052px) {
+    .nav li a{line-height: 20px !important;font-size: 22px;}
+    .ordernow{font-size: 22px; color:yellow;margin-left: 0px;}
+    .choicelogo{margin-left:0px;}
+    h1{margin-left:5%;background-color: #222222;margin-right:5%;border-radius: 5px;padding-left: 15px;}
+
+}
+@media only screen and (max-width: 800px) {
+
+    .navbaritems{display: inline-block; margin-left: 0px;}
+    .info > p{margin:0;}
+     h1{margin-left:2%;background-color: #222222;margin-right:2%;border-radius: 5px;}
+     h2,p,h4{text-align: center;}
+     h3{margin-left: 12px;color:black;}
+     p{color:black;margin-left: 0px;}
+     #foodprice {display:inline-block; float:right; margin-right:12px;}
+    .ingredients{color:red;margin-left: 0px;}
+    .menu{border:1px solid black;text-align: center;margin-bottom: 10px;}
+    
+   
+}
+@media only screen and (max-width:400px) {
+    .choicelogo{width:180px;height: 98px;}
+}
+
