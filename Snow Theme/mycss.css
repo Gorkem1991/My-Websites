@@ -1,0 +1,128 @@
+/*Navigation Bar*/
+.navbar
+{
+	background-color: #70CBCE !important;
+	border: 1px solid #70CBCE !important;
+	padding-bottom:10px !important;
+	margin-top: -75px ;
+	position: fixed !important;
+}
+.nav
+{
+	margin-right: 100px !important;
+}
+.nav li
+{
+	margin-top: 10px;
+	font-size: 17px !important;
+}
+.nav li a
+{
+	font-family: 'Raleway', sans-serif !important;
+	color:white !important;
+}
+.nav li a:hover
+{
+	background-color: transparent;color:#c6eae7 !important;
+	transition: 0.5s;
+}
+.logo
+{
+	margin-top:10px;padding-left: 100px;
+}
+.linksonbg
+{
+	margin-right: 120px !important;
+}
+
+/*Section 1 - background heading, text and buttons*/
+.mountainbg{background:url(header-bg.jpg) no-repeat center center;min-height: 700px;background-size: cover;}
+.headingsc1 h1, .headingsc2 h1, .headingsc3 h1{font-size: 55px;color:white;opacity: 0;animation: animate 1.2s forwards;}
+.headingsc1{margin-top:170px;}
+.loremtext{color:white;font-size: 20px;opacity: 0;animation: animatea 1s forwards;animation-delay:0.7s;}
+.learnbtn{color:black;font-size: 17px;background-color: white;padding: 20px;margin-right: 10px;padding-left: 25px;padding-right:25px;border-radius: 5px;text-decoration: none;opacity: 0;animation: animateb 1s forwards;animation-delay:1.3s;}
+.learnbtn:hover{text-decoration: none;background-color: #EDEDED;color:black;transition:1s;}
+.requestbtn{background-color: #73CDD0;color:white;padding: 20px;padding-left: 25px;padding-right:25px; font-size:17px;border-radius: 5px;text-decoration: none;opacity: 0;animation: animateb 1s forwards;animation-delay:1.3s;}
+.requestbtn:hover{text-decoration: none;color:white;background-color: #8BE2E5;transition:1s;}
+
+/*Section 2 - background, heading, text and iphone*/
+.snowbg{background: url(snowbg.jpg) no-repeat center center fixed;min-height: 750px;background-size: cover;}
+.headingsc2{margin-top: 200px;}
+.headingsc2  h1{opacity: 0;}
+.headingsc2  h1.animate{animation: animatec 1.7s forwards;animation-delay:0.5s;}
+.headingsc2 p{opacity: 0;}
+.headingsc2 p.animate{animation: animated 1.7s forwards;animation-delay:0.5s;}
+.iphone{margin:0 auto;position: absolute;left: 0;right: 0;width: 100%;max-width: 440px;opacity: 0;}
+.iphone.animate{animation:animatee 1s forwards;animation-delay:0.8s;}
+
+/*Section 3 - App features*/
+.appfeature{padding-top: 200px;padding-bottom: 200px;}
+.featuretext{color: black;}
+.feature1,.feature2,.feature3{opacity:0;}
+.feature1.animate{animation:animatef 2s forwards;animation-delay:0.5s;}
+.feature2.animate{animation:animatef 2s forwards;animation-delay:0.9s;}
+.feature3.animate{animation:animatef 2s forwards;animation-delay:1.4s;}
+
+/*Section 4 - heading, text and tables*/
+.headingsc3{padding-top: 200px;background-color: #70CBCE;padding-bottom: 100px;}
+.pricing-table{color:white;}
+.pricing-table {background-color: #FFFFFF; border-top-left-radius:5px;border-top-right-radius:5px;}
+.pricing-table .personal, .pricing-table .money{background-color: #231F20;}
+.personal{border-top-left-radius:5px;border-top-right-radius:5px;padding: 10px;font-size: 17px;}
+.money{font-size: 27px;padding:10px 15px 15px 15px;}
+.tabletext{color: #94ABC7;padding-top:25px;padding-bottom:25px;font-size: 15px;}
+.packagefeature{color:#231F20;padding-bottom:20px;padding-top:20px;font-size: 16px;font-weight: bold;border-top: 1px dotted #e8eaea;}
+.tablebtn {font-weight: bold;padding-top: 12px;padding-bottom: 15px;border-bottom: 1px dotted #E8EAEA;background: #ffffff;color: #70cbce;width: 100%;letter-spacing: 1px;}
+.tablebtn  a {font-size: 14px;color:#70CBCE;text-decoration: none;}
+.tablebtn:hover {background-color: #EDEDED;transition:0.5s;}
+.sc3text{margin-bottom: 100px;}
+.thirdtable, .secondtable ,.firsttable{transition:0.35s;padding-bottom: 20px;opacity: 0;}
+.secondtable{top:-20px;}
+.secondtable ul{box-shadow: 0px 0px 10px black;}
+.thirdtable:hover, .secondtable:hover, .firsttable:hover{margin-top:-15px;}
+.thirdtable:hover .money, .secondtable:hover .money, .firsttable:hover .money{transition:2s;background-color: #303236;}
+.firsttable.animate{animation:animateg 2s forwards;animation-delay:0.8s;}
+.secondtable.animate{animation:animateg 2s forwards;animation-delay:0.3s;}
+.thirdtable.animate{animation:animateg 2s forwards;animation-delay:1.4s;}
+
+/*Section 5 - email input*/
+.emailicon{background-color: #F2F2F2;padding-bottom: 150px;}
+.envelopeicon{margin-top: 150px;font-size: 25px;padding: 20px;border: 2px solid #70CBCE;color:#70CBCE;border-radius: 50px;}
+.emailinput{margin-bottom: 70px;}
+
+/*Section 6 - links and Social media buttons*/
+.lastsection{background-color: #FFFFFF;margin-top: 100px;}
+.lastsection-link1{opacity: 0;}
+.lastsection-link1.animate{animation:animateh 1s forwards;}
+.lastsection-link2{opacity: 0;}
+.lastsection-link2.animate{animation:animateh 1s forwards;animation-delay:0.3s;}
+.lastsection-image{float:left;margin-bottom: 50px;}
+.lastsectionlinks a{text-decoration: none;}
+.lastsectionlinks a p{color: black;font-size: 14px;text-decoration: none;}
+.lastsectionlinks div:last-child {margin-bottom: 80px;}
+.fa{color: #333333;}
+.fa:hover{color: #918F8F;transition:1s;}
+.socialmedialinks{margin-bottom: 30px;}
+
+/*Key frames*/
+@keyframes animate {0%   {opacity: 0;}100% {opacity: 1;}}
+@keyframes animatea {0%   {opacity: 0;}100% {opacity: 1;}}
+@keyframes animateb {0% {opacity: 0;}100% {opacity: 1;}}
+@keyframes animatec {0%   {opacity: 0;}100% {opacity: 1;}}
+@keyframes animated {0%   {opacity: 0;}100% {opacity: 1;}}
+@keyframes animatee {0% {opacity: 0;transform: translateY(50px);}100% {opacity: 1;transform: translateY(0);}}
+@keyframes animatef {0% {opacity: 0;}100% {opacity: 1;}}
+@keyframes animatef {0% {opacity: 0;}100% {opacity: 1;}}
+@keyframes animatef {0% {opacity: 0;}100% {opacity: 1;}}
+@keyframes animateg {0% {opacity: 0;}100% {opacity: 1;}}
+@keyframes animateg {0% {opacity: 0;top: 50px;}100% {opacity: 1;top: 0px;}}
+@keyframes animateg {0% {opacity: 0;transform: translateY(50px);}100% {opacity: 1;transform: translateY(0px);}}
+@keyframes animateh {0% {opacity: 0; transform: translateX(-50px);}100% {opacity: 1; transform: translateX(0);}}
+
+/*Mobile version*/
+@media screen and (max-width: 800px) {
+	.logo{margin-top:0px;padding-left: 0px;}
+	.headingsc1{margin-top:0px;}
+	.learnbtn{font-size: 12px;}
+	.requestbtn{font-size:12px;}
+}
