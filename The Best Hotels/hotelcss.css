@@ -1,0 +1,313 @@
+body
+{
+	 background-image: url("1.jpg");
+	 
+	   background-size: cover;
+	    margin:0px;
+	    height:110%;
+	    overflow-y: scroll;
+		margin: 0;
+		height: 110%;
+            display:block;
+            padding-bottom: 100px;
+}
+
+.linklist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width:100%;
+    margin:0px;
+}
+
+.links {
+    float: right;
+
+}
+
+.links a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: verdana;
+
+}
+
+.links a:hover {
+    background-color: #111;
+}
+
+.content
+{
+
+	width:900px;
+	height:1250px;
+	background-color: white;
+	margin:auto;
+	margin-top:100px;
+	border-radius: 5px;
+	
+	
+}
+.content2
+{
+
+	width:900px;
+	height:1500px;
+	background-color: white;
+	margin:auto;
+	margin-top:100px;
+	border-radius: 5px;
+	
+	
+}
+.content3
+{
+
+	width:900px;
+	height:700px;
+	background-color: white;
+	margin:auto;
+	margin-top:100px;
+	border-radius: 5px;
+	
+	
+}
+.content4
+{
+
+	width:900px;
+	height:500px;
+	background-color: white;
+	margin:auto;
+	margin-top:100px;
+	border-radius: 5px;
+	
+	
+}
+.contentcaesar
+{
+
+	width:900px;
+	height:1500px;
+	background-color: white;
+	margin:auto;
+	margin-top:100px;
+	border-radius: 5px;
+	overflow: auto;
+	
+}
+#navigationbar ul {
+        position:fixed;
+        top: 0;
+
+}
+.items
+{
+	width: 820px;
+	height: 250px;
+	background-color: #E9EAED;
+	 list-style-type: none;
+	 
+}
+h1
+{
+	
+	margin-top: 20px;
+	padding:10px 10px;
+	background-color: #333333;
+	color:white;
+}
+h2
+{
+color: white;
+	
+	background-color: #3E5C9A;
+	text-indent: 10px;
+}
+img
+{
+margin-left: 20px;
+	
+	float: left;
+}
+.texts
+{
+	margin-left: 190px;
+	float: right;
+	display:inline;
+	margin-right: 20px;
+	margin-top: -150px;
+	text-align: justify;
+}
+p
+{
+	margin-left: 40px;
+	font-family: verdana;
+}
+.greenlink
+{
+		float: right;
+	margin-right: 40px;
+	background-color: #5CA745;
+	color:white;
+	text-decoration: none;
+	padding: 10px;
+	margin-top: -20px;
+	border-radius: 4px;
+	font-family: Segoe Print;
+	box-shadow: 3px 3px 3px #888888;
+	
+}
+span
+{
+	float:left;
+	margin-left: 200px;
+	margin-top: -20px;
+	font-family:Shonar Bangla;
+	font-size: 30px;
+	color:red;
+}
+nav
+{
+	float:right;
+	margin-right: 40px;
+	margin-top: -30px;
+	font-family: verdana;
+
+}
+.hoteltext
+{
+	margin-left: 15px;
+	text-align: justify;
+	margin-right: 20px;
+}
+.caesarhotel
+{
+	height:300px; 
+	width:300px;
+	margin-right: 15px;
+}
+.parishotel
+{
+	height:300px; 
+	width:300px;
+	margin-right: 15px;
+}
+.commentheader
+{
+	background-color: #333;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+.name
+{
+	background-color: #3E5C9A;
+	color:white;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+.comment
+{
+	background-color: #E9EAED;
+	margin-right: 20px;
+	margin-left: 20px;
+	height:60px;
+	text-align: justify;
+	margin-top:-17px;
+	text-indent: 5px;
+}
+
+form
+{
+	margin-left: 20px;
+	font-size: 25px;
+	font-family: verdana;
+
+}
+.inputcomment
+{
+	font-size: 20px;
+	width:850px;
+	border: 5px solid #3E5C9A;
+	background-color: #E9EAED;
+}
+.textcomment
+{
+	font-size: 20px;
+	width:850px;
+	height:100px;
+	font-family: verdana;
+	border: 5px solid #3E5C9A;
+	background-color: #E9EAED;
+}
+.buttoncomment
+{
+	width:860px;
+	height:50px;
+	background-color: #5CA745;
+	color:white;
+	font-size: 30px;
+	border: none;
+	box-shadow: 3px 3px 3px #888888;
+}
+#map 
+{
+  width:94%;
+  margin-left: 3%;
+  height:600px;
+  
+   
+}
+
+
+.buttonsubmit
+{
+	width:425px;
+	height:50px;
+	background-color: #5CA745;
+	color:white;
+	font-size: 30px;
+	border: none;
+	box-shadow: 3px 3px 3px #888888;
+}
+
+.buttonreset
+{
+	width:425px;
+	height:50px;
+	background-color: #5CA745;
+	color:white;
+	font-size: 30px;
+	border: none;
+	box-shadow: 3px 3px 3px #888888;
+}
+.hometext
+{
+	text-align: justify;
+	margin-right: 30px;
+}
+.homepic
+{
+	width:300px;
+	height:300px;
+	margin-right: 20px;
+}
+.homepic2
+{
+	width:300px;
+	height:300px;
+	float:right;
+	margin-right: 25px;
+}
+.homepic3
+{
+	width:300px;
+	height:300px;
+	margin-right: 20px;
+}

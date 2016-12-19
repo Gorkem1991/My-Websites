@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html ng-app="SimpleApp">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="hotelcss.css">
+<title>List of Hotels</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src = "listofhotels.js"></script>
+ <link rel="shortcut icon"  href="hotelslogo.ico">
+
+</head>
+
+<body>
+	<div id="navigationbar">
+		<ul class="linklist">
+			<img src="hotelslogo.png" width="78" height="77">
+		 	<li class="links"><a href="http://www.thebesthotels.net16.net/contactus.html" >Contact Us</a></li>
+		 	<li class="links"><a href="http://www.thebesthotels.net16.net/aroundyou.html" >Around Me</a></li>
+		 	<li class="links"><a href="http://www.thebesthotels.net16.net/hotels.html" >Hotels</a></li>
+		 	<li class="links"><a href="http://www.thebesthotels.net16.net/home.html" class="Home" >Home</a></li>
+				
+	 	</ul>
+ 	</div>
+
+ 	<div class="content2" ng-controller="SimpleController">
+ 		<h1>List of Hotels</h1>
+<p>Search:<input type="Text" ng-model="search.name" placeholder="Search for the Hotel"></p>
+ 		<nav>
+	 		
+	 		<a href="http://www.thebesthotels.net16.net/hotels.html" style="background-color:#3E5C9A; color:white">1</a>
+	 		<a href="http://www.thebesthotels.net16.net/hotelspage2.html">2</a>
+	 		<a href="http://www.thebesthotels.net16.net/hotelspage3.html">3</a>
+	 		<a href="http://www.thebesthotels.net16.net/hotelspage4.html">4</a>
+	 	</nav>
+	 	<ul>
+			<li class="items" ng-repeat="entry in collection | filter:search | limitTo:5:0  " ><h2>{{entry.name}}</h2><img src="{{entry.img}}"><p class="texts">{{entry.expla}}</p><span>{{entry.price}}</span>
+				<a  class="greenlink" href="{{entry.click}}"><b>Click for More</b></a></li>
+		</ul>
+ 
+
+</div>
+
+ 	<script>
+	$(window).scroll(function() {
+
+		if($(window).scrollTop()> 100) 
+		{  
+	        
+	        $("#navigationbar").css({"opacity":"0.4","transition-duration": "2s"});
+	        } 
+	        else
+	         {
+	           
+	        $("#navigationbar").css({opacity:1});
+	        }
+
+		});
+ 	</script>
+
+ 	
+</body>
+
+</html>  
