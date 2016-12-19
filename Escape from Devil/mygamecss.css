@@ -1,0 +1,12 @@
+h1{text-align: center;}
+h3{float: left;}
+body{font-family: Verdana;}
+audio{visibility: hidden;position: absolute;}
+.myboard{width:500px; height:500px;background-color: #D6D6D6;margin:0 auto;position: relative;border: 1px solid black;display:block;margin-top: -50px;}
+.area1{float: left;margin-left: 160px;}
+#musicicon{margin-right: 20px;margin-left: 160px;cursor: pointer;}
+#volumeicon{cursor: pointer;}
+.instructions{width: 200px;background: #D6D6D6;border: 1px solid black;}
+.instructions .items{margin-left: 10px;}
+.mybutton{text-align:center;}
+.mybutton .restartbutton{font-size: 20px;cursor: pointer;background-color: #4aadae;border: 1px solid black;color:black;margin-top:1px;width: 500px;}

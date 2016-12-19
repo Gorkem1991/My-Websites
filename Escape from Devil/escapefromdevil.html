@@ -1,0 +1,275 @@
+<html>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="mygamecss.css">
+
+  <body>
+    <title>Escape from the Devil</title>
+    <h1>Escape from the Devil</h1>
+        <link rel="shortcut icon"  href="devil.ico">
+
+    <img src="music.png" id="musicicon" onclick="mutemusic()">
+    <img src="volumeicon.png" id="volumeicon" onclick="mutesound()"><br>
+    
+    <div class="area1">
+      <h3>High Score:</h3>
+      <h3 id="highscore"></h3><br>
+      <h3>Your Score:</h3>
+      <h3 id="yourscore"></h3><h3 id="message" style=" display:none;">  +100</h3><br><br><br><br><br>
+
+      <div class="instructions">
+        <div class="items">
+          <p>Instructions:</p>
+          <h5>Escape from the Devil to score point</h5>
+          <h6>R = Restart the game</h6>
+          <h6>S = Mute sound</h6>
+          <h6>M = Mute music</h6>
+        </div>
+      </div>
+    </div>
+
+    <audio id="itemcollected" controls>
+      <source  src="collected.mp3" type="audio/mpeg">
+    </audio> 
+
+    <audio id="death" controls>
+      <source  src="death.mp3" type="audio/mpeg">
+    </audio> 
+
+    <audio id="bgmusic" loop="loop" autoplay="autoplay">
+      <source  src="bgmusic.mp3" id="bgmusic1" type="audio/mpeg">
+    </audio> 
+
+    <div class="myboard">
+        <img src="schoolboy.png" id='dude' style=' position: absolute; top:0; left:0; z-index:3'>
+        <img src="devil.png" id='square' style='position: absolute; top:90; left:90; z-index:2'>
+        <img src="gdiamond.png" id='diamond' style='position: absolute; top:130; left:130; z-index:2'>
+    </div>
+
+    <div class="mybutton">
+      <button class="restartbutton" onclick="Restart()">Restart</button>
+    </div>
+
+    <script>
+      var backgroundmusic = document.getElementById("bgmusic");
+      var deathsound = document.getElementById("death");
+      var itemcollectedsound = document.getElementById("itemcollected");
+
+      function mutemusic()
+      {
+
+          if(backgroundmusic.muted) 
+          {
+            backgroundmusic.muted = false;
+            document.getElementById('musicicon').src='music.png';
+          }
+          else
+          {
+            backgroundmusic.muted = true;
+            document.getElementById('musicicon').src='musicmute.png';
+          }
+      }
+
+      function mutesound()
+      {
+          if(deathsound.muted) 
+          {
+            deathsound.muted = false;
+            itemcollectedsound.muted =false;
+            document.getElementById('volumeicon').src='volumeicon.png';
+          }
+         else
+         {
+          deathsound.muted = true;
+          itemcollectedsound.muted= true;
+          document.getElementById('volumeicon').src='volumeicon2.png';
+         }
+      }
+      var xEnemy= 90;
+      var yEnemy= 90;
+
+      var xDude=0;
+      var yDude=0;
+
+      var xDiamond = 130;
+      var yDiamond = 130;
+
+      var randomnumber1;
+      var randomnumber2;
+
+      var xSpeed=10;
+      var ySpeed=10;
+
+      var dudeobj = document.getElementById('dude').style;
+      var enemy = document.getElementById('square').style;
+      var diamond =document.getElementById('diamond').style;
+      var audio = document.getElementById("itemcollected"); 
+      var death = document.getElementById("death"); 
+
+
+
+      var stopgame;
+      var point=0;
+      var finish=1;
+
+
+      document.onkeydown = KeyDownMoveIt;
+
+
+      devilsposition();
+      function devilsposition() 
+      {
+            point=point+1;
+        		
+        		if(xEnemy + xSpeed >450)
+            {
+              xSpeed = -5*Math.random() - 5;
+            }
+            if(xEnemy + xSpeed <0)
+            {
+              xSpeed = -5*Math.random() + 5;
+            }
+      			if(yEnemy + ySpeed >450)
+            {
+              ySpeed = -5*Math.random() - 5;
+            }
+            if(yEnemy + ySpeed<0)
+            {
+              ySpeed = -5*Math.random() + 5;
+            }
+            
+
+            xEnemy = xEnemy + xSpeed;
+            yEnemy = yEnemy + ySpeed;
+
+      			enemy.left = xEnemy;
+            enemy.top = yEnemy;
+
+            stopgame = setTimeout('devilsposition()', 10);
+
+        		if((xDude < xEnemy+40 ) && (xDude+40 > xEnemy) && (yDude < yEnemy+40) && (yDude+40>yEnemy))
+            {
+              death.play();
+              clearTimeout(stopgame);
+              finish++;
+              document.body.style.backgroundColor = "red";   
+            }
+
+          document.getElementById('yourscore').innerHTML = point + " ";
+
+          if (localStorage.getItem("storePoint") === null) {
+              localStorage.storePoint = 0;   
+          }
+
+          if(point>localStorage.storePoint)
+          {
+            localStorage.storePoint = point;   
+          }
+         document.getElementById('highscore').innerHTML = localStorage.storePoint;
+      }
+
+
+      function Restart()
+      {
+        
+        xEnemy = 90;
+        yEnemy = 90;
+
+        xDude = 0;
+        yDude = 0;
+
+        xSpeed = 10;
+        ySpeed = 10;
+
+        enemy.left = xEnemy;
+        enemy.top = yEnemy;
+
+        dudeobj.left =0;
+        dudeobj.top = 0;
+
+        finish=1;
+        point=0;
+
+        document.getElementById('yourscore').innerHTML =  point ;
+        document.body.style.backgroundColor = "white";
+
+        clearTimeout(stopgame);
+
+        devilsposition();
+      }
+
+      function KeyDownMoveIt(e) 
+      {
+        if(e.keyCode == 82)
+        {
+          Restart();
+        }
+        if(e.keyCode == 83)
+        {
+          mutesound();
+        }
+        if(e.keyCode == 77)
+        {
+          mutemusic();
+        }
+        if(finish == 1)
+        {
+          if(e.keyCode == 39)
+          {
+            if(xDude<450)
+            {
+              xDude = xDude +10;
+              dudeobj.left = xDude;
+            }
+          }
+          if(e.keyCode == 40)
+          {
+            if(yDude <450)
+            {
+              yDude = yDude +10;
+              dudeobj.top = yDude;
+            } 
+          }
+          if(e.keyCode == 38)
+          {
+            if(yDude >0)
+            {
+              yDude = yDude - 10;
+              dudeobj.top = yDude;
+            }
+          }
+          if(e.keyCode == 37)
+          {
+            if(xDude >0)
+            {
+              xDude = xDude -10;
+              dudeobj.left = xDude;
+            }
+          }
+          if((xDude < xDiamond+40 ) && (xDude+40 > xDiamond) && (yDude < yDiamond+40) && (yDude+40>yDiamond))
+          {
+            $( document ).ready(function(){
+              $('#message').fadeIn('slow', function(){
+                $('#message').delay(500).fadeOut(); 
+                });
+              });
+            point=point+100;
+            creatediamond();
+          }
+        }
+      }
+
+      function creatediamond()
+      {
+        audio.play();
+        randomnumber1 = Math.floor(Math.random() * (450 - 0 + 1)) + 0;
+        randomnumber2 = Math.floor(Math.random() * (450 - 0 + 1)) + 0;
+
+        xDiamond=randomnumber1;
+        yDiamond=randomnumber2;
+
+        diamond.left =randomnumber1;
+        diamond.top = randomnumber2;
+      }
+    </script>
+  </body>
+</html>
